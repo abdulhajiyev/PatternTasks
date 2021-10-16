@@ -3,12 +3,12 @@ using System.Threading;
 
 namespace MementoPattern
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Completed level 1
-            Player player = new Player();
+            Player player = new ();
             player.Level = 1;
             player.Score = 100;
             player.Health = "100%";
@@ -38,9 +38,9 @@ namespace MementoPattern
     // Memento class
     public class Memento
     {
-        public int Level;
-        public int Score;
-        public string Health;
+        public readonly int Level;
+        public readonly int Score;
+        public readonly string Health;
 
         public Memento(int level, int score, string health)
         {
